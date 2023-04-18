@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var AlunosController_1 = require("../controllers/AlunosController");
+var AuthMiddleware_1 = require("../middlewares/AuthMiddleware");
+var roteador = (0, express_1.Router)();
+roteador.get("/alunos", AuthMiddleware_1.AuthMiddleware, AuthMiddleware_1.ManagerMiddleware, AlunosController_1.default.getAlunos);
+roteador.post("/aluno", AlunosController_1.default.inserirAluno);
+roteador.delete("/aluno", AlunosController_1.default.excluirAluno);
+exports.default = roteador;

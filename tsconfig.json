@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "sourceMap": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
